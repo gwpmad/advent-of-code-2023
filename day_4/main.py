@@ -25,12 +25,11 @@ def __solution_1(values: list[str]):
 
 
 def __solution_2(values: list[str]):
-    queue = [{"win_count": get_number_of_winning_tickets(x), "n": 1} for x in values]
+    counts = [1] * len(values)
 
-    for idx, current in enumerate(queue):
-        current = queue[idx]
-        for _ in range(current["n"]):
-            for i in range(idx + 1, idx + 1 + current["win_count"]):
-                queue[i]["n"] += 1
+    for idx, value in enumerate(values):
+        win_count = get_number_of_winning_tickets(value)
+        for i in range(1, win_count + 1):
+            counts[idx + i] += counts[idx]
 
-    return sum(card["n"] for card in queue)
+    return sum(count for count in counts)
