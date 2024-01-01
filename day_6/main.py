@@ -35,7 +35,7 @@ def __get_games(values: list[str]) -> list[Game]:
     )
 
 
-def get_ints_between_solutions_for_record(game):
+def get_ints_between_solutions_for_record(game: Game):
     x = symbols("x")
     min_max_for_record = solve(
         ((game["time"] - x) * x) - game["record"], x
