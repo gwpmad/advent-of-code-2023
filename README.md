@@ -7,7 +7,7 @@ Python this year (likely with some TypeScript when I feel like it)
 ```
 pyenv virtualenv 3.11 advent-of-code-2023
 pyenv local advent-of-code-2023
-pip install
+pip install -r requirements.txt
 ```
 
 ## Running a day
