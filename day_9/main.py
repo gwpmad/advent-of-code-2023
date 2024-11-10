@@ -7,6 +7,7 @@ from utils import open_file
 # Slow solution (takes about a minute) but it made part 2 very easy (just shift the x sequence forward by 1).
 # This page explains well how to get the Lagrange polynomial: https://www.geeksforgeeks.org/lagrange-interpolation-formula/
 # Thanks to this StackOverflow answer for the implementation: https://stackoverflow.com/a/56827866/6453088
+# A better solution making use of Numpy is here: https://www.reddit.com/r/adventofcode/comments/18e5ytd/comment/kclqhga/?utm_source=share&utm_medium=web2x&context=3
 
 
 def solution():
